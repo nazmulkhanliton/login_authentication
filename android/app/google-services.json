@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1015620448784",
+    "project_id": "fir-getx-app-auth",
+    "storage_bucket": "fir-getx-app-auth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015620448784:android:859842645391ab8d571095",
+        "android_client_info": {
+          "package_name": "com.edusoft.loginAuthentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015620448784-ldkqi4i057rv2fmiahc2lmscpjb4lp4c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxGrc5oWI30OJrwOkt6q_G_A6Ju6UQzn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1015620448784-ldkqi4i057rv2fmiahc2lmscpjb4lp4c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1015620448784-38lvf251t12bt3lvnibfb02uf3dg2tv5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.edusoft.loginAuthentication"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
