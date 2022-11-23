@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:login_authentication/auth_controller.dart';
-import 'package:login_authentication/login_page.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -19,11 +18,11 @@ class _WelcomePageState extends State<WelcomePage> {
       body: Column(
         children: [
           const Text(
-              'This is Welcome Page',
-              style: TextStyle(
-                fontSize: 24,
-              ),
+            'This is Welcome Page',
+            style: TextStyle(
+              fontSize: 24,
             ),
+          ),
           const SizedBox(
             height: 10,
           ),
@@ -48,3 +47,4 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 }
 //Hello
+//Test
