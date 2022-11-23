@@ -106,10 +106,6 @@ class _LoginPageState extends State<LoginPage> {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(fixedSize: const Size(700, 55)),
                     onPressed: (){
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => const WelcomePage()),
-                      // );
                       AuthController.instance.login(emailController.text.trim(), passwordController.text.trim());
                     },
                     child: const Text(
