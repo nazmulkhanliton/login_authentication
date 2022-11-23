@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:login_authentication/intro_page.dart';
 import 'package:login_authentication/welcome_page.dart';
 
 import 'login_page.dart';
@@ -26,7 +27,7 @@ class AuthController extends GetxController{
   _initialScreen(User? user){
     if(user==null){
       print("Login Page Test");
-      Get.offAll(()=>const LoginPage());
+      Get.offAll(()=>const IntroPage());
     }else{
       Get.offAll(()=> const WelcomePage());
     }
