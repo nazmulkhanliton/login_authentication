@@ -39,7 +39,7 @@ class _IntroPageState extends State<IntroPage> {
                             builder: (context) => const LoginPage()));
                   },
                   child: const Text(
-                    'Next',
+                    'Login',
                   ),
                 ),
               )

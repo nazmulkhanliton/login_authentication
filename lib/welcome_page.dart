@@ -15,33 +15,36 @@ class _WelcomePageState extends State<WelcomePage> {
       appBar: AppBar(
         title: const Text('Welcome'),
       ),
-      body: Column(
-        children: [
-          const Text(
-            'This is Welcome Page',
-            style: TextStyle(
-              fontSize: 24,
-            ),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          ElevatedButton(
-            onPressed: (){
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => const LoginPage()),
-              // );
-              AuthController.instance.logout();
-            },
-            child: const Text(
-              'LogOut',
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'This is Welcome Page',
               style: TextStyle(
-
+                fontSize: 24,
               ),
             ),
-          ),
-        ],
+            const SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: (){
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => const LoginPage()),
+                // );
+                AuthController.instance.logout();
+              },
+              child: const Text(
+                'LogOut',
+                style: TextStyle(
+
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
