@@ -42,12 +42,26 @@ class _IntroPageState extends State<IntroPage> {
                     'Login',
                   ),
                 ),
-              )
+              ),
+              // const SizedBox(
+              //   height: 10,
+              // ),
+
+              ElevatedButton(
+                onPressed: (){
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginPage()));
+                },
+                child: const Text(
+                  'Sign Up'
+                ),
+              ),
             ],
           ),
         ),
       ),
-
     );
   }
 }
