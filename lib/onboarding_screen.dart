@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:login_authentication/intro_screens/intro_page_1.dart';
+import 'package:login_authentication/intro_screens/intro_page_2.dart';
+import 'package:login_authentication/login_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import 'intro_screens/intro_page_3.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
@@ -12,6 +17,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   //Control to keep track of which page we are on.
   PageController _controller = PageController();
 
+  //Keep track of if we are on tap the last page or not.
+  bool onlastPage = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,16 +29,15 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
           PageView(
             controller: _controller,
-            children: [
-              Container(
-                color: Colors.blue,
-              ),
-              Container(
-                color: Colors.cyan,
-              ),
-              Container(
-                color: Colors.amberAccent,
-              ),
+            onPageChanged: (index) {
+              setState(() {
+                onlastPage = (index == 2);
+              });
+            },
+            children: const [
+              IntroPage1(),
+              IntroPage2(),
+              IntroPage3(),
             ],
           ),
 
@@ -38,8 +45,52 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
           Container(
             alignment: const Alignment(0, 0.75),
-            child: SmoothPageIndicator(controller: _controller, count: 3),
-          )
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                //Skip
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginPage()));
+                  },
+                  child: const Text(
+                    'Skip',
+                  ),
+                ),
+
+                //Dot Indicator
+                SmoothPageIndicator(controller: _controller, count: 3),
+
+                //next or Done
+                onlastPage
+                    ? GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const LoginPage()));
+                        },
+                        child: const Text(
+                          'Done',
+                        ),
+                      )
+                    : GestureDetector(
+                        onTap: () {
+                          _controller.nextPage(
+                            duration: const Duration(microseconds: 5000),
+                            curve: Curves.easeIn,
+                          );
+                        },
+                        child: const Text(
+                          'Next',
+                        ),
+                      ),
+              ],
+            ),
+          ),
         ],
       ),
     );
