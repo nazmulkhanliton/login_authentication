@@ -5,6 +5,7 @@ import 'package:login_authentication/intro_screen/intro_page.dart';
 import 'package:login_authentication/welcome_page.dart';
 
 import 'login_page.dart';
+import 'onboarding_screen.dart';
 
 
 class AuthController extends GetxController{
@@ -27,7 +28,7 @@ class AuthController extends GetxController{
   _initialScreen(User? user){
     if(user==null){
       print("Login Page Test");
-      Get.offAll(()=>const IntroPage());
+      Get.offAll(()=>const OnBoardingScreen());
     }else{
       Get.offAll(()=> const WelcomePage());
     }

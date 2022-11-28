@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:login_authentication/login_page.dart';
 
 class IntroPage extends StatefulWidget {
