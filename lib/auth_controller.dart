@@ -1,10 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:login_authentication/intro_screen/intro_page.dart';
 import 'package:login_authentication/welcome_page.dart';
-
-import 'login_page.dart';
 import 'onboarding_screen.dart';
 
 
