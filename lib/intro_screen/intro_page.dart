@@ -18,8 +18,7 @@ class _IntroPageState extends State<IntroPage> {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            //crossAxisAlignment: CrossAxisAlignment.center,
-            //Welcome
+
             children: [
               const Text(
                 'Intro page',
@@ -39,7 +38,7 @@ class _IntroPageState extends State<IntroPage> {
                             builder: (context) => const LoginPage()));
                   },
                   child: const Text(
-                    'Login',
+                    'Sign In',
                   ),
                 ),
               ),
