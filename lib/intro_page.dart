@@ -65,4 +65,3 @@ class _IntroPageState extends State<IntroPage> {
     );
   }
 }
-//Hello test
