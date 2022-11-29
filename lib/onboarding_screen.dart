@@ -15,7 +15,7 @@ class OnBoardingScreen extends StatefulWidget {
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   //Control to keep track of which page we are on.
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
 
   //Keep track of if we are on tap the last page or not.
   bool onlastPage = false;
@@ -80,7 +80,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     : GestureDetector(
                         onTap: () {
                           _controller.nextPage(
-                            duration: const Duration(microseconds: 5000),
+                            duration: const Duration(milliseconds: 400),
                             curve: Curves.easeIn,
                           );
                         },
