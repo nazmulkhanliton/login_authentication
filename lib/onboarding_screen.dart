@@ -3,6 +3,7 @@ import 'package:login_authentication/intro_screens/intro_page_1.dart';
 import 'package:login_authentication/intro_screens/intro_page_2.dart';
 import 'package:login_authentication/login_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:get/get.dart';
 
 import 'intro_screens/intro_page_3.dart';
 

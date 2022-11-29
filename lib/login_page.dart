@@ -101,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     //color: Colors.deepPurple,
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(fixedSize: const Size(700, 55)),
@@ -132,12 +132,23 @@ class _LoginPageState extends State<LoginPage> {
                   ),
 
                   TextButton(
-                      onPressed: () {
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (context) => const SignUp()));
-                      },
+                      onPressed: () => showDialog<String>(
+                        context: context,
+                        builder: (BuildContext context) => AlertDialog(
+                          title: const Text('Not Implemented', style: TextStyle(fontSize: 14),),
+                          content: const Text('Thank You', style: TextStyle(fontSize: 26),),
+                          actions: <Widget>[
+                            // TextButton(
+                            //   onPressed: () => Navigator.pop(context, 'Cancel'),
+                            //   child: const Text('Cancel'),
+                            // ),
+                            TextButton(
+                              onPressed: () => Navigator.pop(context, 'OK'),
+                              child: const Text('OK'),
+                            ),
+                          ],
+                        ),
+                      ),
                       child: const Text('Register now'))
                 ],
               ),

@@ -42,7 +42,7 @@ class AuthController extends GetxController{
         backgroundColor: Colors.redAccent,
         snackPosition: SnackPosition.BOTTOM,
         titleText: const Text(
-          "Login Failed",
+          "Login Failed Try Another Time",
           style: TextStyle(
             color: Colors.white,
           ),
