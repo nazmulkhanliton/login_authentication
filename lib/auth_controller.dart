@@ -2,7 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_authentication/welcome_page.dart';
-import 'onboarding_screen.dart';
+
+import 'onBoarding_screen.dart';
 
 
 class AuthController extends GetxController{
@@ -24,7 +25,7 @@ class AuthController extends GetxController{
   }
   _initialScreen(User? user){
     if(user==null){
-      print("Login Page Test");
+      //print("Login Page Test");
       Get.offAll(()=>const OnBoardingScreen());
     }else{
       Get.offAll(()=> const WelcomePage());
@@ -35,9 +36,9 @@ class AuthController extends GetxController{
   void login(String email, password)async{
     try{
       await auth.signInWithEmailAndPassword(email: email, password: password);
-      print("Auth Try Test");
+      //print("Auth Try Test");
     }catch(e){
-      print("Test catch");
+      //print("Test catch");
       Get.snackbar("About Login", "Login Message",
         backgroundColor: Colors.redAccent,
         snackPosition: SnackPosition.BOTTOM,
