@@ -39,7 +39,7 @@ class _WelcomePageState extends State<WelcomePage> {
               child: const Text(
                 'LogOut',
                 style: TextStyle(
-
+                  //Hello Test, For the temp
                 ),
               ),
             ),
