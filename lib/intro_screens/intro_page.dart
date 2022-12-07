@@ -41,9 +41,7 @@ class _IntroPageState extends State<IntroPage> {
                   ),
                 ),
               ),
-              // const SizedBox(
-              //   height: 10,
-              // ),
+            
 
               ElevatedButton(
                 onPressed: (){
